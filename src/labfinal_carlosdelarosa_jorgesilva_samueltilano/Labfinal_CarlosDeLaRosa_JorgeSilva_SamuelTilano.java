@@ -91,6 +91,9 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
         ImageIcon regresaricon = new ImageIcon(iconmanager.class.getResource("/Imgs/regresar.jpg"));
         regresaricon = new ImageIcon(regresaricon.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+        
+        ImageIcon J2 = new ImageIcon(iconmanager.class.getResource("/Imgs/J2.jpg"));
+        J2 = new ImageIcon(J2.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
         JOptionPane.showMessageDialog(null, ""
                 + "BIENVENIDO A MATEMÁTICAS VERSÁTILES, JUEGOS Y MÁS.."
