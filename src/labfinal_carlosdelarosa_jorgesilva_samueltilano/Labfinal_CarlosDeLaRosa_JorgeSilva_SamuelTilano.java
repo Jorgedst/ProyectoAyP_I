@@ -166,9 +166,23 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                 }*/
                                             }
                                         }
-                                        flow = JOptionPane.showConfirmDialog(null, "𝙱𝚘𝚕𝚊 𝚋𝚕𝚊𝚗𝚌𝚊, 𝚌𝚊𝚜𝚒𝚕𝚕𝚊: " + LanzamientoBlanca + "\n"
-                                                + "𝙱𝚘𝚕𝚊 𝚗𝚎𝚐𝚛𝚊, 𝚌𝚊𝚜𝚒𝚕𝚕𝚊: " + LanzamientoNegra
-                                                + "\n¿DESEA LANZAR OTRAVÉZ?", "Matemáticas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, lanzar);
+                                        if (colorBlanca == 1 & colorNegra == 0 & (sum <= 19 | sum >= 29)) {
+                                            JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond3);
+                                            sum1++;
+                                        } else {
+                                            if (colorBlanca == 1 & colorNegra == 0 & (sum >= 20 | sum < 29)) {
+                                                System.out.println("Ganancia por condicion 2");
+                                                sum2++;
+                                            } else {
+                                                if (colorBlanca == 0 & colorNegra == 1 & sum <= 21) {
+                                                    System.out.println("Ganancia por condicion 3");
+                                                    sum3++;
+                                                } else {
+                                                    System.out.println("No tuviste Ganancias, No se cumplieron ninguna de las condiciones.");
+                                                }
+                                            }
+                                        }
+                                        flow = JOptionPane.showConfirmDialog(null, "¿DESEA LANZAR OTRAVÉZ?", "Matemáticas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, lanzar);
                                         if (flow == 0) {
                                             giros += 1;
                                         }
@@ -239,7 +253,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                     op: opción, para que el jugador escoja si empezar o no la partida
                                     reg: regresar, para preguntarle al jugador si quiere jugar de nuevo
                                     c1-c9: casillas del juego que son la implementacion detrás de la mostrada al jugador*/
-                                    int mov=1,
+                                    int mov = 1,
                                      pos,
                                      optr = 1,
                                      reg = 1,
