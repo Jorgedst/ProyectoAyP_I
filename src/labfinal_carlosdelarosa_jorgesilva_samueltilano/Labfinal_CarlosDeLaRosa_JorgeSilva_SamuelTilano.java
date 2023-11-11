@@ -120,7 +120,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
         ImageIcon empate = new ImageIcon(iconmanager.class.getResource("/Imgs/empate.jpg"));
         empate = new ImageIcon(empate.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
-        
+
         ImageIcon regtriqui = new ImageIcon(iconmanager.class.getResource("/Imgs/regtriqui.jpg"));
         regtriqui = new ImageIcon(regtriqui.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
@@ -217,34 +217,40 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             mayorgan = sum3;
                                         }
                                     }
-                                    //GANANCIA 1 Y 2
+                                    //NO GANANCIA
                                     if (mayorgan == 0) {
                                         JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, nogainget);
                                     } else {
-                                        if (mayorgan == sum1 && sum1 == sum2) {
-                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y2);
+                                        //GANANCIA POR IGUAL 
+                                        if (mayorgan == sum1 && sum1 == sum2 && sum2 == sum3) {
+                                            JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, todascond);
                                         } else {
-                                            //GANANCIA 2 Y 3
-                                            if (mayorgan == sum2 && sum2 == sum3) {
-                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2y3);
+                                            //GANANCIA 1 Y 2
+                                            if (mayorgan == sum1 && sum1 == sum2) {
+                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y2);
                                             } else {
-                                                //GANANCIA 1 Y 3
-                                                if (mayorgan == sum3 && sum3 == sum1) {
-                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y3);
+                                                //GANANCIA 2 Y 3
+                                                if (mayorgan == sum2 && sum2 == sum3) {
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2y3);
                                                 } else {
-                                                    //GANANCIA 1
-                                                    if (mayorgan == sum1) {
-                                                        JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1);
+                                                    //GANANCIA 1 Y 3
+                                                    if (mayorgan == sum3 && sum3 == sum1) {
+                                                        JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y3);
                                                     } else {
-                                                        //GANANCIA 2
-                                                        if (mayorgan == sum2) {
-                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2);
+                                                        //GANANCIA 1
+                                                        if (mayorgan == sum1) {
+                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1);
                                                         } else {
-                                                            //GANANCIA 3
-                                                            if (mayorgan == sum3) {
-                                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond3);
-                                                            }
+                                                            //GANANCIA 2
+                                                            if (mayorgan == sum2) {
+                                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2);
+                                                            } else {
+                                                                //GANANCIA 3
+                                                                if (mayorgan == sum3) {
+                                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond3);
+                                                                }
 
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -332,12 +338,17 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                     do {
                                                         pos = Integer.parseInt(JOptionPane.showInputDialog(null,
                                                                 "EL TRIQUI"
-                                                                + "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
-                                                                + "                    ------------------\n"
-                                                                + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
-                                                                + "                    ------------------\n"
-                                                                + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n"
-                                                                + "\nGUÍA: Ingresa la posicion correpondiente a la casilla.", "Matematicas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
+                                                                + "\n                         " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                                + "                     ------------------\n"
+                                                                + "                         " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
+                                                                + "                     ------------------\n"
+                                                                + "                         " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n"
+                                                                + "\nGUÍA: Ingresa la posicion correpondiente a la casilla.\n\n"
+                                                                + "                             1 | 2 | 3\n"
+                                                                + "                             ---------\n"
+                                                                + "                             4 | 5 | 6\n"
+                                                                + "                             ---------\n"
+                                                                + "                             7 | 8 | 9 \n\n", "Matematicas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
                                                         if (pos < 1 || pos > 9) {
                                                             JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cinvalida);
                                                         }
@@ -358,7 +369,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                         System.out.println(c4 + " | " + c5 + " | " + c6);
                                                         System.out.println("---------");
                                                         System.out.println(c7 + " | " + c8 + " | " + c9);
-                                                        */
+                                                         */
                                                         /*Se le muestra al usuario el tablero despues de ingresar una posicion*/
 
                                                     }
@@ -407,12 +418,17 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                     do {
                                                         pos = Integer.parseInt(JOptionPane.showInputDialog(null,
                                                                 "EL TRIQUI"
-                                                                + "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
-                                                                + "                    ------------------\n"
-                                                                + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
-                                                                + "                    ------------------\n"
-                                                                + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n"
-                                                                + "\nGUÍA: Ingresa la posicion correpondiente a la casilla.", "Matematicas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
+                                                                + "\n                         " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                                + "                     ------------------\n"
+                                                                + "                         " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
+                                                                + "                     ------------------\n"
+                                                                + "                         " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n"
+                                                                + "\nGUÍA: Ingresa la posicion correpondiente a la casilla.\n\n"
+                                                                + "                             1 | 2 | 3\n"
+                                                                + "                             ---------\n"
+                                                                + "                             4 | 5 | 6\n"
+                                                                + "                             ---------\n"
+                                                                + "                             7 | 8 | 9 \n\n", "Matematicas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
                                                         if (pos < 1 || pos > 9) {
                                                             JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cinvalida);
                                                         }
@@ -475,11 +491,11 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                 en que posisciones podria ganar (si se cumple alguna se declara como ganador)*/
                                                 if ((c1 == 1 && c1 == c2 && c2 == c3) || (c4 == 1 && c4 == c5 && c5 == c6) || (c7 == 1 && c7 == c8 && c8 == c9) || (c1 == 1 && c1 == c4 && c4 == c7) || (c2 == 1 && c2 == c5 && c5 == c8) || (c3 == 1 && c3 == c6 && c6 == c9)
                                                         || (c1 == 1 && c1 == c5 && c5 == c9) || (c3 == 1 && c3 == c5 && c5 == c7) || (c7 == 1 && c7 == c8 && c8 == c9)) {
-                                                    JOptionPane.showMessageDialog(null, "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                    JOptionPane.showMessageDialog(null, "\n                      " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
                                                             + "                    ------------------\n"
                                                             + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
                                                             + "                    ------------------\n"
-                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, j1ganador);
+                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n        ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, j1ganador);
                                                     /*Al movmiento se le asigna el valor 11 para terminar la partida, ya que hubo un ganador*/
                                                     mov = 11;
                                                 }
@@ -487,22 +503,22 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                 en que posisciones podria ganar (si se cumple alguna se declara como ganador)*/
                                                 if ((c1 == 2 && c1 == c2 && c2 == c3) || (c4 == 2 && c4 == c5 && c5 == c6) || (c7 == 2 && c7 == c8 && c8 == c9) || (c1 == 2 && c1 == c4 && c4 == c7) || (c2 == 2 && c2 == c5 && c5 == c8) || (c3 == 2 && c3 == c6 && c6 == c9)
                                                         || (c1 == 2 && c1 == c5 && c5 == c9) || (c3 == 2 && c3 == c5 && c5 == c7) || (c7 == 2 && c7 == c8 && c8 == c9)) {
-                                                    JOptionPane.showMessageDialog(null, "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                    JOptionPane.showMessageDialog(null, "\n                      " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
                                                             + "                    ------------------\n"
                                                             + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
                                                             + "                    ------------------\n"
-                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, j2ganador);
+                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n        ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, j2ganador);
                                                     /*Al movmiento se le asigna el valor 11 para terminar la partida, ya que hubo un ganador*/
                                                     mov = 11;
                                                 }
                                                 /*Se implemente un condicional que determinaría el caso de empate, si los movimientos realizados son mayores o iguales que 10, 
                                                 y diferentes de 11 (por que 'mov' ya es 11 para terminar la partida) hay un empate*/
                                                 if (mov != 11 && mov >= 10) {
-                                                    JOptionPane.showMessageDialog(null, "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                    JOptionPane.showMessageDialog(null, "\n                      " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
                                                             + "                    ------------------\n"
                                                             + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
                                                             + "                    ------------------\n"
-                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, empate);
+                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n        ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, empate);
                                                 }
                                                 /*Este condicional revisa el valor de mov, si es mayor que 9, es decir si alguien gano, o quedo en empate directamente termina el juego*/
                                                 if (mov > 9) {
@@ -542,7 +558,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                     }
                                     break;
                                 case 3:
-                                    
+
                                     break;
                             }
                         } while (opj != 4);
