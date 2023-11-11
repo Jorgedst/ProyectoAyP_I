@@ -33,9 +33,10 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
         float mayorgan;
         float prom1, prom2, prom3;
         float sum1 = 0, sum2 = 0, sum3 = 0;
-
-        Random rango = new Random();
-        Scanner leer = new Scanner(System.in);
+        
+        
+        
+        Random rand = new Random();
         ImageIcon mvjicon = new ImageIcon(iconmanager.class.getResource("/Imgs/mvj_icono.png"));
         mvjicon = new ImageIcon(mvjicon.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
@@ -172,8 +173,8 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             }
                                         } while (flow != 0);
                                         JOptionPane.showMessageDialog(null, "", "Censando...", JOptionPane.PLAIN_MESSAGE, censando);
-                                        LanzamientoBlanca = rango.nextInt(24) + 1;
-                                        LanzamientoNegra = rango.nextInt(24) + 1;
+                                        LanzamientoBlanca = rand.nextInt(24) + 1;
+                                        LanzamientoNegra = rand.nextInt(24) + 1;
                                         sum = LanzamientoBlanca + LanzamientoNegra;
                                         if (LanzamientoBlanca % 2 == 1) {
                                             colorBlanca = 0;
