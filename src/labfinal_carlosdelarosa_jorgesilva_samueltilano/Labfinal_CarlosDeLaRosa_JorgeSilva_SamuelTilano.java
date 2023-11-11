@@ -353,13 +353,13 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                         c1 = 1;
                                                         cm1 = 'o';
                                                         /*Esta sería la implementación detras de la que se muestra al jugador, pues se toman en cuenta los valores del O (1) y X (2)
-                                                         System.out.println(c1 + " | " + c2 + " | " + c3);
-                                                         System.out.println("---------");
-                                                         System.out.println(c4 + " | " + c5 + " | " + c6);
-                                                         System.out.println("---------");
-                                                         System.out.println(c7 + " | " + c8 + " | " + c9);
-                                                         */
- /*Se le muestra al usuario el tablero despues de ingresar una posicion*/
+                                                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                                                        System.out.println("---------");
+                                                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                                                        System.out.println("---------");
+                                                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                                                        */
+                                                        /*Se le muestra al usuario el tablero despues de ingresar una posicion*/
 
                                                     }
                                                     if (pos == 2) {
