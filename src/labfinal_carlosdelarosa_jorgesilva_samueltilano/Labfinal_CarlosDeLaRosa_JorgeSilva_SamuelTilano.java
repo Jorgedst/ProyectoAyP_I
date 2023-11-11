@@ -34,9 +34,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
         float mayorgan;
         float prom1, prom2, prom3;
         float sum1 = 0, sum2 = 0, sum3 = 0;
-        
-        
-        
+
         Random rand = new Random();
         ImageIcon mvjicon = new ImageIcon(iconmanager.class.getResource("/Imgs/mvj_icono.png"));
         mvjicon = new ImageIcon(mvjicon.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
@@ -373,7 +371,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                         System.out.println("---------");
                                                         System.out.println(c7 + " | " + c8 + " | " + c9);
                                                          */
-                                                        /*Se le muestra al usuario el tablero despues de ingresar una posicion*/
+ /*Se le muestra al usuario el tablero despues de ingresar una posicion*/
 
                                                     }
                                                     if (pos == 2) {
@@ -561,7 +559,202 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                     }
                                     break;
                                 case 3:
+                                    //Variables:
+                                    //rand se utiliza para crear una cartilla de bingo al azar.
+                                    //A su vez se utiliza rand para dar las estampas de la cartilla.
+                                    //Entrada del usuario, en este caso las entradas que se usan son (1) para si, (2) para no.
+                                    //estas son las 9 casillas de la cartilla.
+                                    int bc1,
+                                     bc2,
+                                     bc3,
+                                     bc4,
+                                     bc5,
+                                     bc6,
+                                     bc7,
+                                     bc8,
+                                     bc9;
+                                    char bc1m,
+                                     bc2m,
+                                     bc3m,
+                                     bc4m,
+                                     bc5m,
+                                     bc6m,
+                                     bc7m,
+                                     bc8m,
+                                     bc9m;
+                                    //op corresponde a la entrada del usuario.
+                                    //num es el numero de la estampa dada al usuario.
+                                    int b_num,
+                                     b_op,
+                                     b_op2;
+                                    String b_msgExtra = "Estampado!";
+                                    JOptionPane.showMessageDialog(null, "Bienvenido al Bingo!");
+                                    JOptionPane.showMessageDialog(null, "Nuevo Juego");
 
+                                    /*
+                                        En esta seccion del programa las casillas son asignadas con un numero al azar del 1 al 9, posteriormente,
+                                        si el numero ya habia sido asignado en otra casilla, el numero al azar se vuelve a calcular, 
+                                        de tal manera que no se repitan numeros a lo largo de la cartilla. Esto se realiza comparando el valor
+                                        entre casillas.
+            
+                                     */
+                                    bc1 = rand.nextInt(9) + 1;
+                                    bc1m = (char)bc1;
+
+                                    do {
+                                        bc2 = rand.nextInt(9) + 1;
+                                        bc2m = (char)bc2;
+                                    } while (bc2 == bc1);
+
+                                    do {
+                                        bc3 = rand.nextInt(9) + 1;
+                                        bc3m = (char)bc3;
+                                    } while (bc3 == bc2 | bc3 == bc1);
+
+                                    do {
+                                        bc4 = rand.nextInt(9) + 1;
+                                        bc4m = (char)bc4;
+                                    } while (bc4 == bc3 | bc4 == bc2 | bc4 == bc1);
+
+                                    do {
+                                        bc5 = rand.nextInt(9) + 1;
+                                        bc5m = (char)bc5;
+                                    } while (bc5 == bc4 | bc5 == bc3 | bc5 == bc2 | bc5 == bc1);
+
+                                    do {
+                                        bc6 = rand.nextInt(9) + 1;
+                                        bc6m = (char)bc6;
+                                    } while (bc6 == bc5 | bc6 == bc4 | bc6 == bc3 | bc6 == bc2 | bc6 == bc1);
+
+                                    do {
+                                        bc7 = rand.nextInt(9) + 1;
+                                        bc7m = (char)bc7;
+                                    } while (bc7 == bc6 | bc7 == bc5 | bc7 == bc4 | bc7 == bc3 | bc7 == bc2 | bc7 == bc1);
+
+                                    do {
+                                        bc8 = rand.nextInt(9) + 1;
+                                        bc8m = (char)bc8;
+                                    } while (bc8 == bc7 | bc8 == bc6 | bc8 == bc5 | bc8 == bc4 | bc8 == bc3 | bc8 == bc2 | bc8 == bc1);
+
+                                    do {
+                                        bc9 = rand.nextInt(9) + 1;
+                                        bc9m = (char)bc8;
+                                    } while (bc9 == bc8 | bc9 == bc7 | bc9 == bc6 | bc9 == bc5 | bc9 == bc4 | bc9 == bc3 | bc9 == bc2 | bc9 == bc1);
+
+                                    //Salida del programa, cartilla generada.
+                                    JOptionPane.showMessageDialog(null, "Cartilla generada:\n"
+                                            + "\n" + bc1 + " | " + bc2 + " | " + bc3
+                                            + "\n---------"
+                                            + "\n" + bc4 + " | " + bc5 + " | " + bc6
+                                            + "\n---------"
+                                            + "\n" + bc7 + " | " + bc8 + " | " + bc9
+                                            + "");
+
+                                    for (int i = 0; i <= 7; i++) {
+                                        //Aqui el usuario puede dar orden para recibir una estampa.
+                                        b_op = Integer.parseInt(JOptionPane.showInputDialog(null, "Deseas recibir una estampilla? \n1. Si \n2. No"));
+                                        //Validacion de entrada del usuario.
+                                        while (b_op < 1 | b_op > 2) {
+                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
+                                            b_op = (int) JOptionPane.showConfirmDialog(null, "Porfavor responde \n1. Recibir estampilla \n2.No recibir estampilla", "Matematicas versatíles, juegos y más",
+                                                     JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                                        }
+                                        if (b_op == 1) {
+                                            b_num = rand.nextInt(9) + 1;
+
+                                            //Se estampa la casilla, en caso de estar estampado el numero obtenido
+                                            //Se muestra "Este numero ya fue marcado!" y se ignora el numero obtenido.
+                                            if (b_num == bc1) {
+                                                bc1 = 0;
+                                                bc1m= '☺';
+                                            } else if (b_num == bc2) {
+                                                bc2 = 0;
+                                                bc2m= '☺';
+                                            } else if (b_num == bc3) {
+                                                bc3 = 0;
+                                                bc3m= '☺';
+                                            } else if (b_num == bc4) {
+                                                bc4 = 0;
+                                                bc4m= '☺';
+                                            } else if (b_num == bc5) {
+                                                bc5 = 0;
+                                                bc5m= '☺';
+                                            } else if (b_num == bc6) {
+                                                bc6 = 0;
+                                                bc6m= '☺';
+                                            } else if (b_num == bc7) {
+                                                bc7 = 0;
+                                                bc7m= '☺';
+                                            } else if (b_num == bc8) {
+                                                bc8 = 0;
+                                                bc8m= '☺';
+                                            } else if (b_num == bc9) {
+                                                bc9 = 0;
+                                                bc9m= '☺';
+                                            } else {
+                                                b_msgExtra = "Este numero ya fue marcado!";
+                                            }
+                                            //Aqui se muestra la cartilla con las respectivas estampas.
+
+                                            JOptionPane.showMessageDialog(null, "Cartilla generada:\n"
+                                                    + "NUMERO RECIBIDO: " + b_num
+                                                    + "\n" + b_msgExtra + "\n"
+                                                    + "---------------\n\n"
+                                                    + "\n" + bc1m + " | " + bc2m + " | " + bc3m
+                                                    + "\n---------"
+                                                    + "\n" + bc4m + " | " + bc5m + " | " + bc6m
+                                                    + "\n---------"
+                                                    + "\n" + bc7m + " | " + bc8m + " | " + bc9m
+                                                    + "\n\n---------------");
+                                            b_msgExtra = "Estampado!";
+
+                                            if (i >= 3) {
+                                                //condiciones para ganar horizontalmente.
+                                                if (bc1 == bc2 & bc2 == bc3) {
+                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    i = 8;
+                                                } else if (bc4 == bc5 & bc5 == bc6) {
+                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    i = 8;
+                                                } else if (bc7 == bc8 & bc8 == bc9) {
+                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    i = 8;
+                                                } //condiciones para ganar verticalmente.
+                                                else if (bc1 == bc4 & bc4 == bc7) {
+                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    i = 8;
+                                                } else if (bc2 == bc5 & bc5 == bc8) {
+                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    i = 8;
+                                                } else if (bc3 == bc6 & bc6 == bc9) {
+                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    i = 8;
+                                                } else if (i == 7) {
+                                                    //Si ninguna de las condiciones anteriores fue cumplida, y se sobrepasa el numero de intentos, entonces, se pierde.
+                                                    JOptionPane.showMessageDialog(null, "Perdiste...\n Se acabaron los intentos.\n ;(");
+                                                }
+                                            }
+
+                                        } else {
+                                            do {
+                                                b_op2 = JOptionPane.showConfirmDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, regresaricon);
+                                                if (b_op2 == 0) {
+
+                                                }
+                                            } while (b_op2 < 1 | b_op2 > 2);
+                                            //Se pregunta al usuario si quiere salir de la aplicacion.
+
+                                            //Validacion de entrada del usuario.
+                                            if (b_op2 == 1) {
+                                                System.out.println("Hasta luego!");
+                                                i = 8;
+                                            } else {
+                                                System.out.println("Regreso al juego!");
+                                                i = i - 1;
+
+                                            }
+                                        }
+                                    }
                                     break;
                             }
                         } while (opj != 4);
