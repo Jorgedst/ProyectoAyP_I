@@ -42,11 +42,12 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
         error = new ImageIcon(error.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
         ImageIcon working = new ImageIcon(iconmanager.class.getResource("/Imgs/working.jpg"));
-        working = new ImageIcon(working.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+        working = new ImageIcon(working.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
         ImageIcon adios = new ImageIcon(iconmanager.class.getResource("/Imgs/adios.jpg"));
         adios = new ImageIcon(adios.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
+        //IMPORTACIÓN DE IMAGENES PARA EL JUEGO DE LA RULETA
         ImageIcon ruleta = new ImageIcon(iconmanager.class.getResource("/Imgs/ruleta.jpg"));
         ruleta = new ImageIcon(ruleta.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
@@ -56,7 +57,6 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
         ImageIcon lanzar = new ImageIcon(iconmanager.class.getResource("/Imgs/lanzar.jpg"));
         lanzar = new ImageIcon(lanzar.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        //Importación de imagenes de condiciones cumplidas del bingo
         ImageIcon todascond = new ImageIcon(iconmanager.class.getResource("/Imgs/ctodas.jpg"));
         todascond = new ImageIcon(todascond.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
@@ -80,8 +80,20 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
         ImageIcon nogain = new ImageIcon(iconmanager.class.getResource("/Imgs/nogain.jpg"));
         nogain = new ImageIcon(nogain.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
-        //Importación de imagenes para el juego del triqui
 
+        ImageIcon gain1 = new ImageIcon(iconmanager.class.getResource("/Imgs/gain1.jpg"));
+        gain1 = new ImageIcon(gain1.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon gain2 = new ImageIcon(iconmanager.class.getResource("/Imgs/gain2.jpg"));
+        gain2 = new ImageIcon(gain2.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon gain3 = new ImageIcon(iconmanager.class.getResource("/Imgs/gain3.jpg"));
+        gain3 = new ImageIcon(gain3.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon nogainget = new ImageIcon(iconmanager.class.getResource("/Imgs/nogainget.jpg"));
+        nogainget = new ImageIcon(nogainget.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+
+        //IMPORTACIÓN DE IMAGENES PARA EL JUEGO DEL TRIQUI.
         ImageIcon triquimenu = new ImageIcon(iconmanager.class.getResource("/Imgs/triquimenu.jpg"));
         triquimenu = new ImageIcon(triquimenu.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
@@ -90,16 +102,33 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
         ImageIcon regresaricon = new ImageIcon(iconmanager.class.getResource("/Imgs/regresar.jpg"));
         regresaricon = new ImageIcon(regresaricon.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
-        
+
         ImageIcon J2 = new ImageIcon(iconmanager.class.getResource("/Imgs/J2.jpg"));
         J2 = new ImageIcon(J2.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon cinvalida = new ImageIcon(iconmanager.class.getResource("/Imgs/cinvalida.jpg"));
+        cinvalida = new ImageIcon(cinvalida.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon cocupada = new ImageIcon(iconmanager.class.getResource("/Imgs/cocupada.jpg"));
+        cocupada = new ImageIcon(cocupada.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon j1ganador = new ImageIcon(iconmanager.class.getResource("/Imgs/j1ganador.jpg"));
+        j1ganador = new ImageIcon(j1ganador.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon j2ganador = new ImageIcon(iconmanager.class.getResource("/Imgs/j2ganador.jpg"));
+        j2ganador = new ImageIcon(j2ganador.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon empate = new ImageIcon(iconmanager.class.getResource("/Imgs/empate.jpg"));
+        empate = new ImageIcon(empate.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+        
+        ImageIcon regtriqui = new ImageIcon(iconmanager.class.getResource("/Imgs/regtriqui.jpg"));
+        regtriqui = new ImageIcon(regtriqui.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
         JOptionPane.showMessageDialog(null, ""
                 + "BIENVENIDO A MATEMÁTICAS VERSÁTILES, JUEGOS Y MÁS.."
                 + "\nEste es un programa que combina la diversión de juegos emocionantes, con cálculos matemáticos. "
                 + "\nSi te encanta jugar a juegos como la ruleta, Triqui, Bingo o eres más intelectual y te gusta el cálculo, \n"
-                + "has instalado el programa adecuado. "
-                + "\n                                                                              ⊂ ͡• ‿‿ ͡•つ",
+                + "has instalado el programa adecuado. ",
                 "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, mvjicon);
         do {
             do {
@@ -156,32 +185,22 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             colorNegra = 1;
                                         }
                                         if (colorBlanca == 1 & colorNegra == 0 & (sum <= 19 | sum >= 29)) {
-                                            sum1++;
-                                        } else {
-                                            if (colorBlanca == 1 & colorNegra == 0 & (sum >= 20 && sum < 29)) {
-                                                sum2++;
-                                            } else {
-                                                if (colorBlanca == 0 & colorNegra == 1 & sum <= 21) {
-                                                    sum3++;
-                                                }
-                                                /*else {
-                                                    System.out.println("No tuviste Ganancias, No se cumplieron ninguna de las condiciones.");
-                                                }*/
-                                            }
-                                        }
-                                        if (colorBlanca == 1 & colorNegra == 0 & (sum <= 19 | sum >= 29)) {
-                                            JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond3);
+                                            JOptionPane.showMessageDialog(null, "Bola blanca, Casilla: " + LanzamientoBlanca + ""
+                                                    + "\n Bola Negra, Casilla: " + LanzamientoNegra, "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gain1);
                                             sum1++;
                                         } else {
                                             if (colorBlanca == 1 & colorNegra == 0 & (sum >= 20 | sum < 29)) {
-                                                System.out.println("Ganancia por condicion 2");
+                                                JOptionPane.showMessageDialog(null, "Bola blanca, Casilla: " + LanzamientoBlanca + ""
+                                                        + "\n Bola Negra, Casilla: " + LanzamientoNegra, "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gain2);
                                                 sum2++;
                                             } else {
                                                 if (colorBlanca == 0 & colorNegra == 1 & sum <= 21) {
-                                                    System.out.println("Ganancia por condicion 3");
+                                                    JOptionPane.showMessageDialog(null, "Bola blanca, Casilla: " + LanzamientoBlanca + ""
+                                                            + "\n Bola Negra, Casilla: " + LanzamientoNegra, "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gain3);
                                                     sum3++;
                                                 } else {
-                                                    System.out.println("No tuviste Ganancias, No se cumplieron ninguna de las condiciones.");
+                                                    JOptionPane.showMessageDialog(null, "Bola blanca, Casilla: " + LanzamientoBlanca
+                                                            + "\n Bola Negra, Casilla: " + LanzamientoNegra, "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, nogain);
                                                 }
                                             }
                                         }
@@ -198,40 +217,40 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             mayorgan = sum3;
                                         }
                                     }
-                                    //TODAS LAS CONDICIONES
-                                    //CONDICIÓN 1 Y 2
-                                    if (mayorgan == sum1 && sum1 == sum2) {
-                                        JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y2);
+                                    //GANANCIA 1 Y 2
+                                    if (mayorgan == 0) {
+                                        JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, nogainget);
                                     } else {
-                                        //CONDICION 2 Y 3
-                                        if (mayorgan == sum2 && sum2 == sum3) {
-                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2y3);
+                                        if (mayorgan == sum1 && sum1 == sum2) {
+                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y2);
                                         } else {
-                                            //CONDICIÓN 1 Y 3
-                                            if (mayorgan == sum3 && sum3 == sum1) {
-                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y3);
+                                            //GANANCIA 2 Y 3
+                                            if (mayorgan == sum2 && sum2 == sum3) {
+                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2y3);
                                             } else {
-                                                //CONDICIÓN 1
-                                                if (mayorgan == sum1) {
-                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1);
+                                                //GANANCIA 1 Y 3
+                                                if (mayorgan == sum3 && sum3 == sum1) {
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1y3);
                                                 } else {
-                                                    //CONDICIÓN 2
-                                                    if (mayorgan == sum2) {
-                                                        JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2);
+                                                    //GANANCIA 1
+                                                    if (mayorgan == sum1) {
+                                                        JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond1);
                                                     } else {
-                                                        //CONDICIÓN 3
-                                                        if (mayorgan == sum3) {
-                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond3);
-                                                            //NINGUNA CONDICIÓN
+                                                        //GANANCIA 2
+                                                        if (mayorgan == sum2) {
+                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond2);
                                                         } else {
-                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, nogain);
+                                                            //GANANCIA 3
+                                                            if (mayorgan == sum3) {
+                                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cond3);
+                                                            }
+
                                                         }
                                                     }
                                                 }
                                             }
                                         }
                                     }
-
                                     regresar = JOptionPane.showConfirmDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, regresaricon);
                                     if (regresar == 1) {
                                         opj = 4;
@@ -310,32 +329,27 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                     /*Se lee informa al jugador el turno (O)*/
                                                     JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, turn1);
                                                     /*Se le pide la posicion a ocupar, mostrando el tablero con las casillas vacias*/
-                                                    pos = Integer.parseInt(JOptionPane.showInputDialog(null,
-                                                            "EL TRIQUI"
-                                                            + "\n   " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
-                                                            + "------------------\n"
-                                                            + "   " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
-                                                            + "------------------\n"
-                                                            + "   " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n"
-                                                            + "\nGUÍA: Ingresa la posicion correpondiente a la casilla.", "Matematicas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
-                                                    /*Validacion de la posicion en la que quiere jugar el jugador 1*/
-                                                    while (pos < 1 || pos > 9) {
-                                                        System.out.println("Casilla invalida:");
-                                                        pos = leer.nextInt();
-                                                    }
-                                                    /*Se valida posicion por si esta ocupada y se realiza una segunda validacion de la posicion por si ingresa un numero que no esta en el rango*/
-                                                    while ((pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
-                                                            || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0)) {
-                                                        System.out.println("Casilla ocupada: ");
-                                                        pos = leer.nextInt();
-                                                        while (pos < 1 || pos > 9) {
-                                                            System.out.println("Casilla invalida:");
-                                                            pos = leer.nextInt();
+                                                    do {
+                                                        pos = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                                                "EL TRIQUI"
+                                                                + "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                                + "                    ------------------\n"
+                                                                + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
+                                                                + "                    ------------------\n"
+                                                                + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n"
+                                                                + "\nGUÍA: Ingresa la posicion correpondiente a la casilla.", "Matematicas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
+                                                        if (pos < 1 || pos > 9) {
+                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cinvalida);
                                                         }
-                                                    }
-                                                    /*Condicional de cada posicion que puede ingresar el jugador 1; pos = 1 (#75) - pos = 9 (#155)*/
+                                                        if ((pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
+                                                                || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0)) {
+                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cocupada);
+                                                        }
+                                                        //SE VALIDA QUE EL JUGADOR HALLA INGRESADO UN VALOR DEL TABLERO Y NO ESTE OCUPADO
+                                                    } while (pos < 1 || pos > 9 || (pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
+                                                            || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0));
                                                     if (pos == 1) {
-                                                        /*Si el jugador 1 escoge la posición 1 para empezar, la casilla 1 tomara dos asignaciones, 1 (para la implementacion) y 'o' (para la salida)*/
+                                                        /*Si el jugador 1 escoge la posición 1 para empezar, la variable c1 = 1 (para la implementacion) y la variable c1m= 'o' (para la salida)*/
                                                         c1 = 1;
                                                         cm1 = 'o';
                                                         /*Esta sería la implementación detras de la que se muestra al jugador, pues se toman en cuenta los valores del O (1) y X (2)
@@ -346,235 +360,196 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                          System.out.println(c7 + " | " + c8 + " | " + c9);
                                                          */
  /*Se le muestra al usuario el tablero despues de ingresar una posicion*/
-                                                        System.out.println("\n");
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 2) {
                                                         c2 = 1;
                                                         cm2 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + c9);
+
                                                     }
                                                     if (pos == 3) {
                                                         c3 = 1;
                                                         cm3 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 4) {
                                                         c4 = 1;
                                                         cm4 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 5) {
                                                         c5 = 1;
                                                         cm5 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 6) {
                                                         c6 = 1;
                                                         cm6 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 7) {
                                                         c7 = 1;
                                                         cm7 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 8) {
                                                         c8 = 1;
                                                         cm8 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 9) {
                                                         c9 = 1;
                                                         cm9 = 'o';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                 } else {
-                                                    System.out.println("Turno del jugador 2:");
-                                                    pos = leer.nextInt();
-                                                    while (pos < 1 || pos > 9) {
-                                                        System.out.println("Casilla invalida:");
-                                                        pos = leer.nextInt();
-                                                    }
-                                                    while ((pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
-                                                            || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0)) {
-                                                        System.out.println("Casilla ocupada: ");
-                                                        pos = leer.nextInt();
-                                                        while (pos < 1 || pos > 9) {
-                                                            System.out.println("Casilla invalida:");
-                                                            pos = leer.nextInt();
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, J2);
+                                                    do {
+                                                        pos = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                                                "EL TRIQUI"
+                                                                + "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                                + "                    ------------------\n"
+                                                                + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
+                                                                + "                    ------------------\n"
+                                                                + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n"
+                                                                + "\nGUÍA: Ingresa la posicion correpondiente a la casilla.", "Matematicas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
+                                                        if (pos < 1 || pos > 9) {
+                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cinvalida);
                                                         }
-                                                    }
+                                                        if ((pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
+                                                                || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0)) {
+                                                            JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cocupada);
+                                                        }
+                                                        //SE VALIDA QUE EL JUGADOR HALLA INGRESADO UN VALOR DEL TABLERO Y NO ESTE OCUPADO
+                                                    } while (pos < 1 || pos > 9 || (pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
+                                                            || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0));
+                                                    //SE MUESTRA EL TABLERO SEGÚN LA POSICIÓN SELECCIONADA
                                                     if (pos == 1) {
                                                         c1 = 2;
                                                         cm1 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 2) {
                                                         c2 = 2;
                                                         cm2 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 3) {
                                                         c3 = 2;
                                                         cm3 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 4) {
                                                         c4 = 2;
                                                         cm4 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 5) {
                                                         c5 = 2;
                                                         cm5 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 6) {
                                                         c6 = 2;
                                                         cm6 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 7) {
                                                         c7 = 2;
                                                         cm7 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 8) {
                                                         c8 = 2;
                                                         cm8 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
+
                                                     }
                                                     if (pos == 9) {
                                                         c9 = 2;
                                                         cm9 = 'x';
-                                                        System.out.println(cm1 + " | " + cm2 + " | " + cm3);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm4 + " | " + cm5 + " | " + cm6);
-                                                        System.out.println("---------");
-                                                        System.out.println(cm7 + " | " + cm8 + " | " + cm9);
                                                     }
                                                 }
-                                                /*Despues de que el jugador 1 o 2 haya ingresado la posición se le suma un movimiento, es decir se hace una iteracion*/
+                                                /*Despues de que el jugador 1 o 2 haya ingresado la posición se le suma un movimiento.*/
                                                 mov = mov + 1;
                                                 /*Se implementa un condicional para ver si el jugador 1 gana dependiendo de 
                                                 en que posisciones podria ganar (si se cumple alguna se declara como ganador)*/
                                                 if ((c1 == 1 && c1 == c2 && c2 == c3) || (c4 == 1 && c4 == c5 && c5 == c6) || (c7 == 1 && c7 == c8 && c8 == c9) || (c1 == 1 && c1 == c4 && c4 == c7) || (c2 == 1 && c2 == c5 && c5 == c8) || (c3 == 1 && c3 == c6 && c6 == c9)
                                                         || (c1 == 1 && c1 == c5 && c5 == c9) || (c3 == 1 && c3 == c5 && c5 == c7) || (c7 == 1 && c7 == c8 && c8 == c9)) {
-                                                    System.out.println("!EL JUGADOR 1 HA GANADO!");
-                                                    /*Al movmiento se le asigna el valor 11 para terminar la partida*/
+                                                    JOptionPane.showMessageDialog(null, "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                            + "                    ------------------\n"
+                                                            + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
+                                                            + "                    ------------------\n"
+                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, j1ganador);
+                                                    /*Al movmiento se le asigna el valor 11 para terminar la partida, ya que hubo un ganador*/
                                                     mov = 11;
                                                 }
                                                 /*Se implementa un condicional para ver si el jugador 2 gana dependiendo de 
                                                 en que posisciones podria ganar (si se cumple alguna se declara como ganador)*/
                                                 if ((c1 == 2 && c1 == c2 && c2 == c3) || (c4 == 2 && c4 == c5 && c5 == c6) || (c7 == 2 && c7 == c8 && c8 == c9) || (c1 == 2 && c1 == c4 && c4 == c7) || (c2 == 2 && c2 == c5 && c5 == c8) || (c3 == 2 && c3 == c6 && c6 == c9)
                                                         || (c1 == 2 && c1 == c5 && c5 == c9) || (c3 == 2 && c3 == c5 && c5 == c7) || (c7 == 2 && c7 == c8 && c8 == c9)) {
-                                                    System.out.println("!EL JUGADOR 2 HA GANADO!");
-                                                    /*Al movmiento se le asigna el valor 11 para terminar la partida*/
+                                                    JOptionPane.showMessageDialog(null, "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                            + "                    ------------------\n"
+                                                            + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
+                                                            + "                    ------------------\n"
+                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, j2ganador);
+                                                    /*Al movmiento se le asigna el valor 11 para terminar la partida, ya que hubo un ganador*/
                                                     mov = 11;
                                                 }
                                                 /*Se implemente un condicional que determinaría el caso de empate, si los movimientos realizados son mayores o iguales que 10, 
                                                 y diferentes de 11 (por que 'mov' ya es 11 para terminar la partida) hay un empate*/
                                                 if (mov != 11 && mov >= 10) {
-                                                    System.out.println("!!EMPATE!!");
+                                                    JOptionPane.showMessageDialog(null, "\n                       " + cm1 + "   | " + cm2 + "    | " + cm3 + "\n"
+                                                            + "                    ------------------\n"
+                                                            + "                       " + cm4 + "   | " + cm5 + "    | " + cm6 + "\n"
+                                                            + "                    ------------------\n"
+                                                            + "                       " + cm7 + "   | " + cm8 + "    | " + cm9 + "\n", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, empate);
                                                 }
                                                 /*Este condicional revisa el valor de mov, si es mayor que 9, es decir si alguien gano, o quedo en empate directamente termina el juego*/
                                                 if (mov > 9) {
-                                                    op = 2;
+                                                    optr = 2;
                                                 }
                                                 /*Este es el 'while' del primer 'do', si se cumple se repetira el ciclo como se menciono anteriormente*/
                                             } while (mov < 9);
                                         }
                                         /*Se le pregunta al usuario si desea regresar al menu anterior*/
-                                        System.out.println("¿Desea regresar al menú?\n(1)SI\n(2)NO");
-                                        System.out.print("- ");
-                                        reg = leer.nextInt();
-                                        /*Se valida el valor para regresar para que solo pueda escoger 1 o 2*/
-                                        while (reg > 2 || reg < 1) {
-                                            System.out.println("Valor incorrecto, digite de nuevo\n(1)Si\n(2)No");
-                                            System.out.print("- ");
-                                            reg = leer.nextInt();
+                                        do {
+                                            reg = JOptionPane.showConfirmDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, regtriqui);
+                                        } while (reg > 1 || reg < 0);
+                                        //Se reinician las variables en caso de volver a jugar...
+                                        if (reg == 1) {
+                                            mov = 1;
+                                            optr = 1;
+                                            reg = 1;
+                                            c1 = 0;
+                                            c2 = 0;
+                                            c3 = 0;
+                                            c4 = 0;
+                                            c5 = 0;
+                                            c6 = 0;
+                                            c7 = 0;
+                                            c8 = 0;
+                                            c9 = 0;
+                                            cm1 = ' ';
+                                            cm2 = ' ';
+                                            cm3 = ' ';
+                                            cm4 = ' ';
+                                            cm5 = ' ';
+                                            cm6 = ' ';
+                                            cm7 = ' ';
+                                            cm8 = ' ';
+                                            cm9 = ' ';
                                         }
                                     }
-                                    /*Se le da la despedida al jugador*/
-                                    System.out.println("Gracias por jugar, vuelva pronto");
                                     break;
                                 case 3:
-
+                                    
                                     break;
                             }
                         } while (opj != 4);
                         break;
                     case 2:
-                        JOptionPane.showMessageDialog(null, "En Construcción... ", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, working);
+                        //PROCESOS MATEMATICOS EN CONSTRUCCIÓN
+                        JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, working);
                         break;
                 }
             } while (op < 1 || op > 3);
