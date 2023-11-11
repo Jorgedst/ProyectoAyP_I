@@ -598,46 +598,45 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
             
                                      */
                                     bc1 = rand.nextInt(9) + 1;
-                                    
 
                                     do {
                                         bc2 = rand.nextInt(9) + 1;
-                                        
+
                                     } while (bc2 == bc1);
 
                                     do {
                                         bc3 = rand.nextInt(9) + 1;
-                                        
+
                                     } while (bc3 == bc2 | bc3 == bc1);
 
                                     do {
                                         bc4 = rand.nextInt(9) + 1;
-                                        
+
                                     } while (bc4 == bc3 | bc4 == bc2 | bc4 == bc1);
 
                                     do {
                                         bc5 = rand.nextInt(9) + 1;
-                                       
+
                                     } while (bc5 == bc4 | bc5 == bc3 | bc5 == bc2 | bc5 == bc1);
 
                                     do {
                                         bc6 = rand.nextInt(9) + 1;
-                                        
+
                                     } while (bc6 == bc5 | bc6 == bc4 | bc6 == bc3 | bc6 == bc2 | bc6 == bc1);
 
                                     do {
                                         bc7 = rand.nextInt(9) + 1;
-                                        
+
                                     } while (bc7 == bc6 | bc7 == bc5 | bc7 == bc4 | bc7 == bc3 | bc7 == bc2 | bc7 == bc1);
 
                                     do {
                                         bc8 = rand.nextInt(9) + 1;
-                                        
+
                                     } while (bc8 == bc7 | bc8 == bc6 | bc8 == bc5 | bc8 == bc4 | bc8 == bc3 | bc8 == bc2 | bc8 == bc1);
 
                                     do {
                                         bc9 = rand.nextInt(9) + 1;
-                                        
+
                                     } while (bc9 == bc8 | bc9 == bc7 | bc9 == bc6 | bc9 == bc5 | bc9 == bc4 | bc9 == bc3 | bc9 == bc2 | bc9 == bc1);
 
                                     //Salida del programa, cartilla generada.
@@ -651,16 +650,15 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
                                     for (int i = 0; i <= 7; i++) {
                                         //Aqui el usuario puede dar orden para recibir una estampa.
-                                        do{
+                                        do {
                                             b_op = Integer.parseInt(JOptionPane.showInputDialog(null, "Deseas recibir una estampilla? \n1. Si \n2. No"));
-                                            if(b_op < 1 | b_op > 2){
+                                            if (b_op < 1 | b_op > 2) {
                                                 JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
                                             }
-                                            
-                                        }while (b_op < 1 | b_op > 2);
-                                        
-                                        //Validacion de entrada del usuario.
 
+                                        } while (b_op < 1 | b_op > 2);
+
+                                        //Validacion de entrada del usuario.
                                         if (b_op == 1) {
                                             b_num = rand.nextInt(9) + 1;
 
@@ -732,15 +730,14 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             do {
                                                 b_op2 = JOptionPane.showConfirmDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, regresaricon);
                                                 if (b_op2 == 0) {
-                                                    i=8;
-                                                }else{
+                                                    i = 8;
+                                                } else {
                                                     i = i - 1;
                                                 }
                                             } while (b_op2 < 0 | b_op2 > 1);
                                             //Se pregunta al usuario si quiere salir de la aplicacion.
 
                                             //Validacion de entrada del usuario.
-                                            
                                         }
                                     }
                                     break;
@@ -756,6 +753,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
         } while (op != 3);
         JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, adios);
+
     }
 
     private static class iconmanager {
@@ -764,4 +762,5 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
         }
 
     }
+
 }
