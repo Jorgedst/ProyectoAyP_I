@@ -20,6 +20,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Definición de variables
         int regresar;
         int op = 0, opj = 1;
         int flow = 0;
@@ -171,8 +172,8 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             }
                                         } while (flow != 0);
                                         JOptionPane.showMessageDialog(null, "", "Censando...", JOptionPane.PLAIN_MESSAGE, censando);
-                                        LanzamientoBlanca = rango.nextInt(9) + 1;
-                                        LanzamientoNegra = rango.nextInt(9) + 1;
+                                        LanzamientoBlanca = rango.nextInt(24) + 1;
+                                        LanzamientoNegra = rango.nextInt(24) + 1;
                                         sum = LanzamientoBlanca + LanzamientoNegra;
                                         if (LanzamientoBlanca % 2 == 1) {
                                             colorBlanca = 0;
@@ -184,17 +185,17 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                         } else {
                                             colorNegra = 1;
                                         }
-                                        if (colorBlanca == 1 & colorNegra == 0 & (sum <= 19 | sum >= 29)) {
+                                        if (colorBlanca == 1 && colorNegra == 0 && (sum <= 19 || sum >= 29)) {
                                             JOptionPane.showMessageDialog(null, "Bola blanca, Casilla: " + LanzamientoBlanca + ""
                                                     + "\n Bola Negra, Casilla: " + LanzamientoNegra, "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gain1);
                                             sum1++;
                                         } else {
-                                            if (colorBlanca == 1 & colorNegra == 0 & (sum >= 20 | sum < 29)) {
+                                            if (colorBlanca == 1 && colorNegra == 0 && (sum >= 20 && sum < 29)) {
                                                 JOptionPane.showMessageDialog(null, "Bola blanca, Casilla: " + LanzamientoBlanca + ""
                                                         + "\n Bola Negra, Casilla: " + LanzamientoNegra, "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gain2);
                                                 sum2++;
                                             } else {
-                                                if (colorBlanca == 0 & colorNegra == 1 & sum <= 21) {
+                                                if (colorBlanca == 0 && colorNegra == 1 && sum <= 21) {
                                                     JOptionPane.showMessageDialog(null, "Bola blanca, Casilla: " + LanzamientoBlanca + ""
                                                             + "\n Bola Negra, Casilla: " + LanzamientoNegra, "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gain3);
                                                     sum3++;
