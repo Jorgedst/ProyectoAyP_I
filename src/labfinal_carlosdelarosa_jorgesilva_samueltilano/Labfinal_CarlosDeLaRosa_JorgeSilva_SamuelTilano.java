@@ -856,7 +856,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             + "\n" + bc7 + " | " + bc8 + " | " + bc9
                                             + "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cartilla);
 
-                                    for (int i = 0; i <= 7; i++) {
+                                    for (int i = 1; i <= 7; i++) {
                                         //Aqui el usuario puede dar orden para recibir una estampa.
                                         do {
                                             b_op = JOptionPane.showConfirmDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, recibir);
