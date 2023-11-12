@@ -974,7 +974,49 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                     break;
                                 //Funciones trigonometricas con series de taylor
                                 case 3:
+                                    //COSENO DE X
+                                    int sumcos,
+                                     potencia1,
+                                     factorial,
+                                     potencia2,
+                                     fin,
+                                     n,
+                                     optrigon;
+                                    float angulo;
+                                    do {
+                                        optrigon = Integer.parseInt(JOptionPane.showInputDialog(null, "CÁLCULO DE FUNCIONES TRIGONOMÉTRICAS\n"
+                                                + "Este programa calcula funciones trigonometricas utilizando series de taylor, \n"
+                                                + "en la cual se realizan sumatorias sucesivas"
+                                                + "con base a un limite ingresado por el usuario y el angulo.\n"
+                                                + "(1) Seno\n"
+                                                + "(2) Coseno\n"
+                                                + "(3) Tangente\n"
+                                                + "(4) Cosecante\n"
+                                                + "(5) Secante\n"
+                                                + "(6) Cotangente\n"
+                                                + "(7) Salír\n\n"
+                                                + "GUÍA: Ingresa el numero correspondiente a la función a calcular.", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE));
+                                        if (optrigon < 1 || optrigon > 7) {
+                                            JOptionPane.showMessageDialog(null, "La opción Que ingresaste es invalida... Intentalo nuevamente ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
+                                        }
+                                        do {
+                                            fin = Integer.parseInt(JOptionPane.showInputDialog(null, "INGRESA EL LIMITE DE LA SUMATORIA DE LA SERÍE", null));
+                                            if (fin < 1) {
+                                                JOptionPane.showMessageDialog(null, "El limite no puede ser inferior a 1 Intentalo nuevamente ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
+                                            }
+                                        } while (fin < 1);
+                                        do {
+                                            angulo = Integer.parseInt(JOptionPane.showInputDialog(null, "INGRESA EL ÁNGULO (en grados)", null));
+                                            if(angulo<1){
+                                                JOptionPane.showMessageDialog(null, "El angulo no puede ser negativo, intenta nuevamente...", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
+                                            }
+                                        } while (angulo < 1);
 
+                                    } while (optrigon < 1 || optrigon > 7);
+
+                                    for (n = 0; n < fin; n++) {
+
+                                    }
                                     break;
                                 //Conversión de numero hexadecimal a decimal
                                 case 4:
