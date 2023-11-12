@@ -982,7 +982,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                      fin,
                                      n,
                                      optrigon;
-                                    float angulo;
+                                    float x;
                                     do {
                                         optrigon = Integer.parseInt(JOptionPane.showInputDialog(null, "CÁLCULO DE FUNCIONES TRIGONOMÉTRICAS\n"
                                                 + "Este programa calcula funciones trigonometricas utilizando series de taylor, \n"
@@ -1006,16 +1006,16 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                             }
                                         } while (fin < 1);
                                         do {
-                                            angulo = Integer.parseInt(JOptionPane.showInputDialog(null, "INGRESA EL ÁNGULO (en grados)", null));
-                                            if(angulo<1){
+                                            x = Integer.parseInt(JOptionPane.showInputDialog(null, "INGRESA EL ÁNGULO (en grados)", null));
+                                            if(x<1){
                                                 JOptionPane.showMessageDialog(null, "El angulo no puede ser negativo, intenta nuevamente...", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
                                             }
-                                        } while (angulo < 1);
+                                        } while (x < 1);
 
                                     } while (optrigon < 1 || optrigon > 7);
 
                                     for (n = 0; n < fin; n++) {
-
+                                        
                                     }
                                     break;
                                 //Conversión de numero hexadecimal a decimal
