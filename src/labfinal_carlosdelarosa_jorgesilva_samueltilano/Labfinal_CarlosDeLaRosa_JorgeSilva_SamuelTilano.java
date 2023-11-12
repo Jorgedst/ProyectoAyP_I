@@ -155,7 +155,7 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                 "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, mvjicon);
         do {
             do {
-                op = Integer.parseInt(JOptionPane.showInputDialog(null, "MENÚ\n(1)Juegos 🎰 \n(2)Matemáticas Versatiles ± \n(3)Salír 👋≧◉ᴥ◉≦", "Matemáticas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
+                op = Integer.parseInt(JOptionPane.showInputDialog(null, "MENÚ PRINCIPAL\n(1)Juegos 🎰 \n(2)Matemáticas Versatiles ± \n(3)Salír 👋≧◉ᴥ◉≦", "Matemáticas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
                 if (op < 1 || op > 3) {
                     JOptionPane.showMessageDialog(null, "La opción Que ingresaste es invalida... Intentalo nuevamente ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
                 }
@@ -957,9 +957,27 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                     case 2:
                         int opm=1;
                         do{
-                            opm= Integer.parseInt(JOptionPane.showInputDialog(null, "MENÚ DE PROCESOS MATEMÁTICOS.\n(1)Eliminar un digito ⨷ \n(2)Calculo de PI y Euler π/e\n(3)Funciones Trigonométricas con series de taylor ∑ \n(4) Conversión de numero hexadecimal a decimal\n(5) Regresar", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE));
+                            opm= Integer.parseInt(JOptionPane.showInputDialog(null, "MENÚ DE PROCESOS MATEMÁTICOS.\n(1)Eliminar un digito 𝟙 \n(2)Calculo de PI y Euler π/e\n(3)Funciones Trigonométricas con series de taylor ∑ \n(4) Conversión de numero hexadecimal a decimal ℂ\n(5) Regresar", "Matemáticas versatíles, juegos y más", JOptionPane.INFORMATION_MESSAGE));
                             if (opm < 1 || opm > 5) {
                                 JOptionPane.showMessageDialog(null, "La opción Que ingresaste es invalida... Intentalo nuevamente ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
+                            }
+                            switch (opm){
+                                //Eliminación de un digito
+                                case 1:
+                                    
+                                    break;
+                                    //Calculo de PI y Euler
+                                case 2:
+                                    
+                                    break;
+                                    //Funciones trigonometricas con series de taylor
+                                case 3:
+                                    
+                                    break;
+                                    //Conversión de numero hexadecimal a decimal
+                                case 4:
+                                    
+                                    break;
                             }
                         }while(opm!=5);
                         break;
