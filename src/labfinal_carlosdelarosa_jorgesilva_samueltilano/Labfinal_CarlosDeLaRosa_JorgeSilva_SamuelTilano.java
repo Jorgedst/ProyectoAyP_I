@@ -144,6 +144,8 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
         ImageIcon nogainbingo = new ImageIcon(IconManager.class.getResource("/Imgs/nogainbingo.jpg"));
         nogainbingo = new ImageIcon(nogainbingo.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+        
+        
 
         JOptionPane.showMessageDialog(null, ""
                 + "BIENVENIDO A MATEMÁTICAS VERSÁTILES, JUEGOS Y MÁS.."
@@ -953,8 +955,13 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                         } while (opj != 4);
                         break;
                     case 2:
-                        //PROCESOS MATEMATICOS EN CONSTRUCCIÓN
-                        JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, working);
+                        int opm=1;
+                        do{
+                            opm= Integer.parseInt(JOptionPane.showInputDialog(null, "MENÚ DE PROCESOS MATEMÁTICOS.\n(1)Eliminar un digito ⨷ \n(2)Calculo de PI y Euler π/e\n(3)Funciones Trigonométricas con series de taylor ∑ \n(4) Conversión de numero hexadecimal a decimal\n(5) Regresar", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE));
+                            if (opm < 1 || opm > 5) {
+                                JOptionPane.showMessageDialog(null, "La opción Que ingresaste es invalida... Intentalo nuevamente ", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
+                            }
+                        }while(opm!=5);
                         break;
                 }
             } while (op < 1 || op > 3);
