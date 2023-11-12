@@ -5,7 +5,6 @@
 package labfinal_carlosdelarosa_jorgesilva_samueltilano;
 
 import java.awt.Image;
-import java.util.Scanner;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import java.util.Random;
@@ -16,9 +15,13 @@ import java.util.Random;
  */
 public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
-    /**
-     * @param args the command line arguments
-     */
+    private static class IconManager {
+
+        public IconManager() {
+        }
+
+    }
+
     public static void main(String[] args) {
         //Definición de variables
         int regresar;
@@ -35,94 +38,112 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
         float sum1 = 0, sum2 = 0, sum3 = 0;
 
         Random rand = new Random();
-        ImageIcon mvjicon = new ImageIcon(iconmanager.class.getResource("/Imgs/mvj_icono.png"));
+        ImageIcon mvjicon = new ImageIcon(IconManager.class.getResource("/Imgs/mvj_icono.png"));
         mvjicon = new ImageIcon(mvjicon.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon error = new ImageIcon(iconmanager.class.getResource("/Imgs/error.jpg"));
+        ImageIcon error = new ImageIcon(IconManager.class.getResource("/Imgs/error.jpg"));
         error = new ImageIcon(error.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon working = new ImageIcon(iconmanager.class.getResource("/Imgs/working.jpg"));
+        ImageIcon working = new ImageIcon(IconManager.class.getResource("/Imgs/working.jpg"));
         working = new ImageIcon(working.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon adios = new ImageIcon(iconmanager.class.getResource("/Imgs/adios.jpg"));
+        ImageIcon adios = new ImageIcon(IconManager.class.getResource("/Imgs/adios.jpg"));
         adios = new ImageIcon(adios.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
         //IMPORTACIÓN DE IMAGENES PARA EL JUEGO DE LA RULETA
-        ImageIcon ruleta = new ImageIcon(iconmanager.class.getResource("/Imgs/ruleta.jpg"));
+        ImageIcon ruleta = new ImageIcon(IconManager.class.getResource("/Imgs/ruleta.jpg"));
         ruleta = new ImageIcon(ruleta.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon censando = new ImageIcon(iconmanager.class.getResource("/Imgs/censando.jpg"));
+        ImageIcon censando = new ImageIcon(IconManager.class.getResource("/Imgs/censando.jpg"));
         censando = new ImageIcon(censando.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon lanzar = new ImageIcon(iconmanager.class.getResource("/Imgs/lanzar.jpg"));
+        ImageIcon lanzar = new ImageIcon(IconManager.class.getResource("/Imgs/lanzar.jpg"));
         lanzar = new ImageIcon(lanzar.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon todascond = new ImageIcon(iconmanager.class.getResource("/Imgs/ctodas.jpg"));
+        ImageIcon todascond = new ImageIcon(IconManager.class.getResource("/Imgs/ctodas.jpg"));
         todascond = new ImageIcon(todascond.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cond1y2 = new ImageIcon(iconmanager.class.getResource("/Imgs/cond1y2.jpg"));
+        ImageIcon cond1y2 = new ImageIcon(IconManager.class.getResource("/Imgs/cond1y2.jpg"));
         cond1y2 = new ImageIcon(cond1y2.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cond2y3 = new ImageIcon(iconmanager.class.getResource("/Imgs/cond2y3.jpg"));
+        ImageIcon cond2y3 = new ImageIcon(IconManager.class.getResource("/Imgs/cond2y3.jpg"));
         cond2y3 = new ImageIcon(cond2y3.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cond1y3 = new ImageIcon(iconmanager.class.getResource("/Imgs/cond1y3.jpg"));
+        ImageIcon cond1y3 = new ImageIcon(IconManager.class.getResource("/Imgs/cond1y3.jpg"));
         cond1y3 = new ImageIcon(cond1y3.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cond1 = new ImageIcon(iconmanager.class.getResource("/Imgs/cond1.jpg"));
+        ImageIcon cond1 = new ImageIcon(IconManager.class.getResource("/Imgs/cond1.jpg"));
         cond1 = new ImageIcon(cond1.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cond2 = new ImageIcon(iconmanager.class.getResource("/Imgs/cond2.jpg"));
+        ImageIcon cond2 = new ImageIcon(IconManager.class.getResource("/Imgs/cond2.jpg"));
         cond2 = new ImageIcon(cond2.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cond3 = new ImageIcon(iconmanager.class.getResource("/Imgs/cond3.jpg"));
+        ImageIcon cond3 = new ImageIcon(IconManager.class.getResource("/Imgs/cond3.jpg"));
         cond3 = new ImageIcon(cond3.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon nogain = new ImageIcon(iconmanager.class.getResource("/Imgs/nogain.jpg"));
+        ImageIcon nogain = new ImageIcon(IconManager.class.getResource("/Imgs/nogain.jpg"));
         nogain = new ImageIcon(nogain.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon gain1 = new ImageIcon(iconmanager.class.getResource("/Imgs/gain1.jpg"));
+        ImageIcon gain1 = new ImageIcon(IconManager.class.getResource("/Imgs/gain1.jpg"));
         gain1 = new ImageIcon(gain1.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon gain2 = new ImageIcon(iconmanager.class.getResource("/Imgs/gain2.jpg"));
+        ImageIcon gain2 = new ImageIcon(IconManager.class.getResource("/Imgs/gain2.jpg"));
         gain2 = new ImageIcon(gain2.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon gain3 = new ImageIcon(iconmanager.class.getResource("/Imgs/gain3.jpg"));
+        ImageIcon gain3 = new ImageIcon(IconManager.class.getResource("/Imgs/gain3.jpg"));
         gain3 = new ImageIcon(gain3.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon nogainget = new ImageIcon(iconmanager.class.getResource("/Imgs/nogainget.jpg"));
+        ImageIcon nogainget = new ImageIcon(IconManager.class.getResource("/Imgs/nogainget.jpg"));
         nogainget = new ImageIcon(nogainget.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
         //IMPORTACIÓN DE IMAGENES PARA EL JUEGO DEL TRIQUI.
-        ImageIcon triquimenu = new ImageIcon(iconmanager.class.getResource("/Imgs/triquimenu.jpg"));
+        ImageIcon triquimenu = new ImageIcon(IconManager.class.getResource("/Imgs/triquimenu.jpg"));
         triquimenu = new ImageIcon(triquimenu.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon turn1 = new ImageIcon(iconmanager.class.getResource("/Imgs/turn1.jpg"));
+        ImageIcon turn1 = new ImageIcon(IconManager.class.getResource("/Imgs/turn1.jpg"));
         turn1 = new ImageIcon(turn1.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon regresaricon = new ImageIcon(iconmanager.class.getResource("/Imgs/regresar.jpg"));
+        ImageIcon regresaricon = new ImageIcon(IconManager.class.getResource("/Imgs/regresar.jpg"));
         regresaricon = new ImageIcon(regresaricon.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon J2 = new ImageIcon(iconmanager.class.getResource("/Imgs/J2.jpg"));
+        ImageIcon J2 = new ImageIcon(IconManager.class.getResource("/Imgs/J2.jpg"));
         J2 = new ImageIcon(J2.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cinvalida = new ImageIcon(iconmanager.class.getResource("/Imgs/cinvalida.jpg"));
+        ImageIcon cinvalida = new ImageIcon(IconManager.class.getResource("/Imgs/cinvalida.jpg"));
         cinvalida = new ImageIcon(cinvalida.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon cocupada = new ImageIcon(iconmanager.class.getResource("/Imgs/cocupada.jpg"));
+        ImageIcon cocupada = new ImageIcon(IconManager.class.getResource("/Imgs/cocupada.jpg"));
         cocupada = new ImageIcon(cocupada.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon j1ganador = new ImageIcon(iconmanager.class.getResource("/Imgs/j1ganador.jpg"));
+        ImageIcon j1ganador = new ImageIcon(IconManager.class.getResource("/Imgs/j1ganador.jpg"));
         j1ganador = new ImageIcon(j1ganador.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon j2ganador = new ImageIcon(iconmanager.class.getResource("/Imgs/j2ganador.jpg"));
+        ImageIcon j2ganador = new ImageIcon(IconManager.class.getResource("/Imgs/j2ganador.jpg"));
         j2ganador = new ImageIcon(j2ganador.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon empate = new ImageIcon(iconmanager.class.getResource("/Imgs/empate.jpg"));
+        ImageIcon empate = new ImageIcon(IconManager.class.getResource("/Imgs/empate.jpg"));
         empate = new ImageIcon(empate.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
-        ImageIcon regtriqui = new ImageIcon(iconmanager.class.getResource("/Imgs/regtriqui.jpg"));
+        ImageIcon regtriqui = new ImageIcon(IconManager.class.getResource("/Imgs/regtriqui.jpg"));
         regtriqui = new ImageIcon(regtriqui.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon bingomenu = new ImageIcon(IconManager.class.getResource("/Imgs/bingomenu.jpg"));
+        bingomenu = new ImageIcon(bingomenu.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon cartilla = new ImageIcon(IconManager.class.getResource("/Imgs/cartilla.jpg"));
+        cartilla = new ImageIcon(cartilla.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon recibir = new ImageIcon(IconManager.class.getResource("/Imgs/recibir.jpg"));
+        recibir = new ImageIcon(recibir.getImage().getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon rez = new ImageIcon(IconManager.class.getResource("/Imgs/rez.png"));
+        rez = new ImageIcon(rez.getImage().getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon gainbingo = new ImageIcon(IconManager.class.getResource("/Imgs/gainbingo.jpg"));
+        gainbingo = new ImageIcon(gainbingo.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
+
+        ImageIcon nogainbingo = new ImageIcon(IconManager.class.getResource("/Imgs/nogainbingo.jpg"));
+        nogainbingo = new ImageIcon(nogainbingo.getImage().getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH));
 
         JOptionPane.showMessageDialog(null, ""
                 + "BIENVENIDO A MATEMÁTICAS VERSÁTILES, JUEGOS Y MÁS.."
@@ -370,7 +391,6 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                         System.out.println("---------");
                                                         System.out.println(c7 + " | " + c8 + " | " + c9);
                                                          */
- /*Se le muestra al usuario el tablero despues de ingresar una posicion*/
 
                                                     }
                                                     if (pos == 2) {
@@ -572,24 +592,39 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                      bc7,
                                      bc8,
                                      bc9;
-                                    char bc1m,
-                                     bc2m,
-                                     bc3m,
-                                     bc4m,
-                                     bc5m,
-                                     bc6m,
-                                     bc7m,
-                                     bc8m,
-                                     bc9m;
+                                    char bc1m = ' ',
+                                     bc2m = ' ',
+                                     bc3m = ' ',
+                                     bc4m = ' ',
+                                     bc5m = ' ',
+                                     bc6m = ' ',
+                                     bc7m = ' ',
+                                     bc8m= ' ',
+                                     bc9m= ' ';
                                     //op corresponde a la entrada del usuario.
                                     //num es el numero de la estampa dada al usuario.
                                     int b_num,
                                      b_op,
                                      b_op2;
                                     String b_msgExtra = "Estampado!";
-                                    JOptionPane.showMessageDialog(null, "Bienvenido al Bingo!");
-                                    JOptionPane.showMessageDialog(null, "Nuevo Juego");
-
+                                    //Se le explica al usuario en que consiste el juego.
+                                    JOptionPane.showMessageDialog(null, "¡Bienvenido al emocionante juego de Bingo!\n"
+                                            + "\n"
+                                            + "Objetivo del Juego:\n"
+                                            + "\n"
+                                            + "completar una línea horizontal o vertical antes de alcanzar las 7 jugadas.\n"
+                                            + "\n"
+                                            + "La tarjeta de Bingo tiene 9 casillas numeradas del 1 al 9.\n"
+                                            + "\n"
+                                            + "El juego generará aleatoriamente números para cada jugada y marcara el numero correspondiente en la casilla.\n"
+                                            + "\n"
+                                            + "Puedes realizar hasta 7 jugadas en total.\n"
+                                            + "Cada vez que se genere un número, el programa verificará si la casilla correspondiente en tu tarjeta de Bingo está disponible.\n"
+                                            + "Si la casilla está disponible, se marcara. Si no, se generará otro número hasta encontrar una casilla válida.\n"
+                                            + "\n"
+                                            + "Si no has ganado después de 7 jugadas, se considera anulado.\n"
+                                            + "\n"
+                                            + "¡Que la suerte te acompañe!", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, bingomenu);
                                     /*
                                         En esta seccion del programa las casillas son asignadas con un numero al azar del 1 al 9, posteriormente,
                                         si el numero ya habia sido asignado en otra casilla, el numero al azar se vuelve a calcular, 
@@ -598,136 +633,312 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
             
                                      */
                                     bc1 = rand.nextInt(9) + 1;
+                                    if (bc1 == 1) {
+                                        bc1m = '1';
+                                    } else if (bc1 == 2) {
+                                        bc1m = '2';
+                                    } else if (bc1 == 3) {
+                                        bc1m = '3';
+                                    } else if (bc1 == 4) {
+                                        bc1m = '4';
+                                    } else if (bc1 == 5) {
+                                        bc1m = '5';
+                                    } else if (bc1 == 6) {
+                                        bc1m = '6';
+                                    } else if (bc1 == 7) {
+                                        bc1m = '7';
+                                    } else if (bc1 == 8) {
+                                        bc1m = '8';
+                                    } else if (bc1 == 9) {
+                                        bc1m = '9';
+                                    }
 
                                     do {
                                         bc2 = rand.nextInt(9) + 1;
+                                        if (bc2 == 1) {
+                                            bc2m = '1';
+                                        } else if (bc2 == 2) {
+                                            bc2m = '2';
+                                        } else if (bc2 == 3) {
+                                            bc2m = '3';
+                                        } else if (bc2 == 4) {
+                                            bc2m = '4';
+                                        } else if (bc2 == 5) {
+                                            bc2m = '5';
+                                        } else if (bc2 == 6) {
+                                            bc2m = '6';
+                                        } else if (bc2 == 7) {
+                                            bc2m = '7';
+                                        } else if (bc2 == 8) {
+                                            bc2m = '8';
+                                        } else if (bc2 == 9) {
+                                            bc2m = '9';
+                                        }
 
                                     } while (bc2 == bc1);
 
                                     do {
                                         bc3 = rand.nextInt(9) + 1;
+                                        if (bc3 == 1) {
+                                            bc3m = '1';
+                                        } else if (bc3 == 2) {
+                                            bc3m = '2';
+                                        } else if (bc3 == 3) {
+                                            bc3m = '3';
+                                        } else if (bc3 == 4) {
+                                            bc3m = '4';
+                                        } else if (bc3 == 5) {
+                                            bc3m = '5';
+                                        } else if (bc3 == 6) {
+                                            bc3m = '6';
+                                        } else if (bc3 == 7) {
+                                            bc3m = '7';
+                                        } else if (bc3 == 8) {
+                                            bc3m = '8';
+                                        } else if (bc3 == 9) {
+                                            bc3m = '9';
+                                        }
 
                                     } while (bc3 == bc2 | bc3 == bc1);
 
                                     do {
                                         bc4 = rand.nextInt(9) + 1;
+                                        if (bc4 == 1) {
+                                            bc4m = '1';
+                                        } else if (bc4 == 2) {
+                                            bc4m = '2';
+                                        } else if (bc4 == 3) {
+                                            bc4m = '3';
+                                        } else if (bc4 == 4) {
+                                            bc4m = '4';
+                                        } else if (bc4 == 5) {
+                                            bc4m = '5';
+                                        } else if (bc4 == 6) {
+                                            bc4m = '6';
+                                        } else if (bc4 == 7) {
+                                            bc4m = '7';
+                                        } else if (bc4 == 8) {
+                                            bc4m = '8';
+                                        } else if (bc4 == 9) {
+                                            bc4m = '9';
+                                        }
 
                                     } while (bc4 == bc3 | bc4 == bc2 | bc4 == bc1);
 
                                     do {
                                         bc5 = rand.nextInt(9) + 1;
+                                        if (bc5 == 1) {
+                                            bc5m = '1';
+                                        } else if (bc5 == 2) {
+                                            bc5m = '2';
+                                        } else if (bc5 == 3) {
+                                            bc5m = '3';
+                                        } else if (bc5 == 4) {
+                                            bc5m = '4';
+                                        } else if (bc5 == 5) {
+                                            bc5m = '5';
+                                        } else if (bc5 == 6) {
+                                            bc5m = '6';
+                                        } else if (bc5 == 7) {
+                                            bc5m = '7';
+                                        } else if (bc5 == 8) {
+                                            bc5m = '8';
+                                        } else if (bc5 == 9) {
+                                            bc5m = '9';
+                                        }
 
                                     } while (bc5 == bc4 | bc5 == bc3 | bc5 == bc2 | bc5 == bc1);
 
                                     do {
                                         bc6 = rand.nextInt(9) + 1;
+                                        if (bc6 == 1) {
+                                            bc6m = '1';
+                                        } else if (bc6 == 2) {
+                                            bc6m = '2';
+                                        } else if (bc6 == 3) {
+                                            bc6m = '3';
+                                        } else if (bc6 == 4) {
+                                            bc6m = '4';
+                                        } else if (bc6 == 5) {
+                                            bc6m = '5';
+                                        } else if (bc6 == 6) {
+                                            bc6m = '6';
+                                        } else if (bc6 == 7) {
+                                            bc6m = '7';
+                                        } else if (bc6 == 8) {
+                                            bc6m = '8';
+                                        } else if (bc6 == 9) {
+                                            bc6m = '9';
+                                        }
 
                                     } while (bc6 == bc5 | bc6 == bc4 | bc6 == bc3 | bc6 == bc2 | bc6 == bc1);
 
                                     do {
                                         bc7 = rand.nextInt(9) + 1;
+                                        if (bc7 == 1) {
+                                            bc7m = '1';
+                                        } else if (bc7 == 2) {
+                                            bc7m = '2';
+                                        } else if (bc7 == 3) {
+                                            bc7m = '3';
+                                        } else if (bc7 == 4) {
+                                            bc7m = '4';
+                                        } else if (bc7 == 5) {
+                                            bc7m = '5';
+                                        } else if (bc7 == 6) {
+                                            bc7m = '6';
+                                        } else if (bc7 == 7) {
+                                            bc7m = '7';
+                                        } else if (bc7 == 8) {
+                                            bc7m = '8';
+                                        } else if (bc7 == 9) {
+                                            bc7m = '9';
+                                        }
 
                                     } while (bc7 == bc6 | bc7 == bc5 | bc7 == bc4 | bc7 == bc3 | bc7 == bc2 | bc7 == bc1);
 
                                     do {
                                         bc8 = rand.nextInt(9) + 1;
+                                        if (bc8 == 1) {
+                                            bc8m = '1';
+                                        } else if (bc8 == 2) {
+                                            bc8m = '2';
+                                        } else if (bc8 == 3) {
+                                            bc8m = '3';
+                                        } else if (bc8 == 4) {
+                                            bc8m = '4';
+                                        } else if (bc8 == 5) {
+                                            bc8m = '5';
+                                        } else if (bc8 == 6) {
+                                            bc8m = '6';
+                                        } else if (bc8 == 7) {
+                                            bc8m = '7';
+                                        } else if (bc8 == 8) {
+                                            bc8m = '8';
+                                        } else if (bc8 == 9) {
+                                            bc8m = '9';
+                                        }
 
                                     } while (bc8 == bc7 | bc8 == bc6 | bc8 == bc5 | bc8 == bc4 | bc8 == bc3 | bc8 == bc2 | bc8 == bc1);
 
                                     do {
                                         bc9 = rand.nextInt(9) + 1;
+                                        if (bc9 == 1) {
+                                            bc9m = '1';
+                                        } else if (bc9 == 2) {
+                                            bc9m = '2';
+                                        } else if (bc9 == 3) {
+                                            bc9m = '3';
+                                        } else if (bc9 == 4) {
+                                            bc9m = '4';
+                                        } else if (bc9 == 5) {
+                                            bc9m = '5';
+                                        } else if (bc9 == 6) {
+                                            bc9m = '6';
+                                        } else if (bc9 == 7) {
+                                            bc9m = '7';
+                                        } else if (bc9 == 8) {
+                                            bc9m = '8';
+                                        } else if (bc9 == 9) {
+                                            bc9m = '9';
+                                        }
 
                                     } while (bc9 == bc8 | bc9 == bc7 | bc9 == bc6 | bc9 == bc5 | bc9 == bc4 | bc9 == bc3 | bc9 == bc2 | bc9 == bc1);
 
                                     //Salida del programa, cartilla generada.
-                                    JOptionPane.showMessageDialog(null, "Cartilla generada:\n"
-                                            + "\n" + bc1 + " | " + bc2 + " | " + bc3
+                                    JOptionPane.showMessageDialog(null, ""
+                                            + "" + bc1 + " | " + bc2 + " | " + bc3
                                             + "\n---------"
                                             + "\n" + bc4 + " | " + bc5 + " | " + bc6
                                             + "\n---------"
                                             + "\n" + bc7 + " | " + bc8 + " | " + bc9
-                                            + "");
+                                            + "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, cartilla);
 
                                     for (int i = 0; i <= 7; i++) {
                                         //Aqui el usuario puede dar orden para recibir una estampa.
                                         do {
-                                            b_op = Integer.parseInt(JOptionPane.showInputDialog(null, "Deseas recibir una estampilla? \n1. Si \n2. No"));
-                                            if (b_op < 1 | b_op > 2) {
-                                                JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, error);
-                                            }
-
-                                        } while (b_op < 1 | b_op > 2);
+                                            b_op = JOptionPane.showConfirmDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, recibir);
+                                        } while (b_op < 0 | b_op > 1);
 
                                         //Validacion de entrada del usuario.
-                                        if (b_op == 1) {
+                                        if (b_op == 0) {
                                             b_num = rand.nextInt(9) + 1;
 
                                             //Se estampa la casilla, en caso de estar estampado el numero obtenido
                                             //Se muestra "Este numero ya fue marcado!" y se ignora el numero obtenido.
                                             if (b_num == bc1) {
                                                 bc1 = 0;
+                                                bc1m = '☻';
                                             } else if (b_num == bc2) {
                                                 bc2 = 0;
+                                                bc2m = '☻';
                                             } else if (b_num == bc3) {
                                                 bc3 = 0;
+                                                bc3m = '☻';
                                             } else if (b_num == bc4) {
                                                 bc4 = 0;
+                                                bc4m = '☻';
                                             } else if (b_num == bc5) {
                                                 bc5 = 0;
+                                                bc5m = '☻';
                                             } else if (b_num == bc6) {
                                                 bc6 = 0;
+                                                bc6m = '☻';
                                             } else if (b_num == bc7) {
                                                 bc7 = 0;
+                                                bc7m = '☻';
                                             } else if (b_num == bc8) {
                                                 bc8 = 0;
+                                                bc8m = '☻';
                                             } else if (b_num == bc9) {
                                                 bc9 = 0;
+                                                bc9m = '☻';
                                             } else {
                                                 b_msgExtra = "Este numero ya fue marcado!";
                                             }
                                             //Aqui se muestra la cartilla con las respectivas estampas.
 
-                                            JOptionPane.showMessageDialog(null, "Cartilla generada:\n"
-                                                    + "NUMERO RECIBIDO: " + b_num
+                                            JOptionPane.showMessageDialog(null, "NUMERO RECIBIDO: " + b_num
                                                     + "\n" + b_msgExtra + "\n"
                                                     + "---------------\n\n"
-                                                    + "\n" + bc1 + " | " + bc2 + " | " + bc3
+                                                    + "\n" + bc1m + " | " + bc2m + " | " + bc3m
                                                     + "\n---------"
-                                                    + "\n" + bc4 + " | " + bc5 + " | " + bc6
+                                                    + "\n" + bc4m + " | " + bc5m + " | " + bc6m
                                                     + "\n---------"
-                                                    + "\n" + bc7 + " | " + bc8 + " | " + bc9
-                                                    + "\n\n---------------");
+                                                    + "\n" + bc7m + " | " + bc8m + " | " + bc9m
+                                                    + "\n\n---------------", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, rez);
                                             b_msgExtra = "Estampado!";
 
                                             if (i >= 3) {
                                                 //condiciones para ganar horizontalmente.
                                                 if (bc1 == bc2 & bc2 == bc3) {
-                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gainbingo);
                                                     i = 8;
                                                 } else if (bc4 == bc5 & bc5 == bc6) {
-                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gainbingo);
                                                     i = 8;
                                                 } else if (bc7 == bc8 & bc8 == bc9) {
-                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gainbingo);
                                                     i = 8;
                                                 } //condiciones para ganar verticalmente.
                                                 else if (bc1 == bc4 & bc4 == bc7) {
-                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gainbingo);
                                                     i = 8;
                                                 } else if (bc2 == bc5 & bc5 == bc8) {
-                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gainbingo);
                                                     i = 8;
                                                 } else if (bc3 == bc6 & bc6 == bc9) {
-                                                    JOptionPane.showMessageDialog(null, "GANASTE!!!");
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, gainbingo);
                                                     i = 8;
                                                 } else if (i == 7) {
                                                     //Si ninguna de las condiciones anteriores fue cumplida, y se sobrepasa el numero de intentos, entonces, se pierde.
-                                                    JOptionPane.showMessageDialog(null, "Perdiste...\n Se acabaron los intentos.\n ;(");
+                                                    JOptionPane.showMessageDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, nogainbingo);
                                                 }
                                             }
 
                                         } else {
                                             do {
+                                                //Se pregunta al usuario si quiere salir de la aplicacion.
                                                 b_op2 = JOptionPane.showConfirmDialog(null, "", "Matematicas versatíles, juegos y más", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, regresaricon);
                                                 if (b_op2 == 0) {
                                                     i = 8;
@@ -735,9 +946,6 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
                                                     i = i - 1;
                                                 }
                                             } while (b_op2 < 0 | b_op2 > 1);
-                                            //Se pregunta al usuario si quiere salir de la aplicacion.
-
-                                            //Validacion de entrada del usuario.
                                         }
                                     }
                                     break;
@@ -753,13 +961,6 @@ public class Labfinal_CarlosDeLaRosa_JorgeSilva_SamuelTilano {
 
         } while (op != 3);
         JOptionPane.showMessageDialog(null, "", "Matemáticas versatíles, juegos y más", JOptionPane.PLAIN_MESSAGE, adios);
-
-    }
-
-    private static class iconmanager {
-
-        public iconmanager() {
-        }
 
     }
 
